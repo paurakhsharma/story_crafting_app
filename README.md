@@ -1,6 +1,6 @@
-# story_crafting_app
+# Story Crafting App
 
-A new Flutter project.
+An app to assist in the development of oral Bible story recordings.
 
 ## Getting Started
 
