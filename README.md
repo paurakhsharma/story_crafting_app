@@ -2,15 +2,16 @@
 
 An app to assist in the development of oral Bible story recordings.
 
-## Getting Started
+## Design
+Home page: 
 
-This project is a starting point for a Flutter application.
+![home page screenshot](https://github.com/UpstreamCollective/story_crafting_app/blob/master/screenshots/home_page.png)
 
-A few resources to get you started if this is your first Flutter project:
+[View full design](https://xd.adobe.com/view/6740570e-748f-4aca-4661-bb776b392116-1171/)
+
+## Flutter Reference
+
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [Flutter online documentation](https://flutter.dev/docs)
