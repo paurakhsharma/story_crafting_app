@@ -9,8 +9,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primaryColor: Colors.blueAccent[200],
-        accentColor: Colors.blueAccent,
+        primaryColor: Colors.lightBlue[600],
+        accentColor: Colors.lightBlue[600],
       ),
       home: StoryListScreen(),
     );
