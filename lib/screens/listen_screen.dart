@@ -2,9 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_sound/flutter_sound.dart';
-import 'package:intl/date_symbol_data_local.dart';
-import 'dart:typed_data' show Uint8List;
-import 'package:intl/intl.dart' show DateFormat;
 import 'package:story_crafting_app/models/story.dart';
 import 'package:story_crafting_app/screens/record_screen.dart';
 import 'package:story_crafting_app/utils/sound_utils.dart';
@@ -35,7 +32,6 @@ class _ListenScreenState extends State<ListenScreen> {
   void initState(){
     super.initState();
     initPlayer();
-    initializeDateFormatting();
   }
 
   void initPlayer() {
@@ -53,22 +49,28 @@ class _ListenScreenState extends State<ListenScreen> {
           _position = e.currentPosition;
           _duration = e.duration;
 
-          DateTime pos = new DateTime.fromMillisecondsSinceEpoch(
-              e.currentPosition.toInt(),
-              isUtc: true);
-          DateTime dur = new DateTime.fromMillisecondsSinceEpoch(
-              e.duration.toInt(),
-              isUtc: true);
 
           this.setState(() {
-            this._timeText = DateFormat('mm:ss:SS', 'en_GB').format(pos).substring(0, 6);
-            this._durationText = DateFormat('mm:ss:SS', 'en_GB').format(dur).substring(0, 6);
+            this._timeText = SoundUtils.formatTime(_position);
+            this._durationText = SoundUtils.formatTime(_duration);
           });
         }
       });
     } catch (err) {
       print('error: $err');
     }
+  }
+
+  void pausePlayer() {
+    audioPlayer.pausePlayer();
+  }
+
+  bool isPlaying() {
+    return audioPlayer.audioState == t_AUDIO_STATE.IS_PLAYING;
+  }
+
+  void replay() {
+    // TODO: implement
   }
 
   @override
@@ -103,9 +105,9 @@ class _ListenScreenState extends State<ListenScreen> {
             Row(
               children: <Widget>[
                 IconButton(
-                  icon: Icon(Icons.play_arrow),
+                  icon: isPlaying() ? Icon(Icons.pause) : Icon(Icons.play_arrow),
                   tooltip: 'Play',
-                  onPressed: () => startPlayer(),
+                  onPressed: isPlaying() ? () => pausePlayer() : () => startPlayer(),
                   color: Theme.of(context).primaryColor,
                 ),
                 Expanded( child: Slider(
@@ -119,17 +121,20 @@ class _ListenScreenState extends State<ListenScreen> {
                 IconButton(
                   icon: Icon(Icons.replay),
                   tooltip: 'Replay',
-                  onPressed: () {},
+                  onPressed: () => replay(),
                   color: Theme.of(context).primaryColor,
                 ),
               ],
             ),
-            Row(
+            Padding(
+              padding: EdgeInsets.fromLTRB(16, 0, 16, 0),
+              child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(this._timeText, style: TextStyle(color: Theme.of(context).primaryColor)),
                 Text(this._durationText.toString(), style: TextStyle(color: Theme.of(context).primaryColor))
               ],
+              )
             ),
             Spacer(),
             Row(

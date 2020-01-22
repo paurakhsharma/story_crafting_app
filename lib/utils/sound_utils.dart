@@ -56,5 +56,10 @@ class SoundUtils {
       return null;
     }
   }
+
+  static String formatTime(double time) {
+    Duration duration = Duration(milliseconds: time.round());
+    return [duration.inHours, duration.inMinutes, duration.inSeconds].map((seg) => seg.remainder(60).toString().padLeft(2, '0')).join(':');
+  }
   
 }
