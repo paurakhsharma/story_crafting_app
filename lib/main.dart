@@ -1,21 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:story_crafting_app/screens/story_list_screen.dart';
+import 'package:story_crafting_app/story_list/story_list_service.dart';
+import 'app.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MyApp(storyListService: FakeStoryListService()));
 
-class MyApp extends StatelessWidget {
-
-
-  @override
-  Widget build(BuildContext context) {
-
-    return MaterialApp(
-      title: 'Story Crafting',
-      theme: ThemeData(
-        primaryColor: Colors.lightBlue[600],
-        accentColor: Colors.lightBlue[600],
-      ),
-      home: StoryListScreen(),
-    );
-  }
-}

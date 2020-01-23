@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:story_crafting_app/models/story.dart';
 import 'package:story_crafting_app/screens/questions_screen.dart';
 import 'package:story_crafting_app/screens/record_screen.dart';
 import 'package:story_crafting_app/screens/submit_screen.dart';
+import 'package:story_crafting_app/story_list/story.dart';
 import 'package:story_crafting_app/widgets/step_widget.dart';
 import 'listen_screen.dart';
 

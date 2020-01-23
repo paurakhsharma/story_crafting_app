@@ -1,4 +1,4 @@
-import 'package:story_crafting_app/models/story.dart';
+import 'package:story_crafting_app/story_list/story.dart';
 
 final stories = [
   Story("Creation Story", "История создания", "Russian"),

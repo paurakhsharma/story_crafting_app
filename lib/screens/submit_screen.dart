@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:story_crafting_app/models/story.dart';
+import 'package:story_crafting_app/story_list/story.dart';
 
 class SubmitScreen extends StatelessWidget {
   final Story story;
