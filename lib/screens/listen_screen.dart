@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_sound/flutter_sound.dart';
-import 'package:story_crafting_app/models/story.dart';
 import 'package:story_crafting_app/screens/record_screen.dart';
+import 'package:story_crafting_app/story_list/story.dart';
 import 'package:story_crafting_app/utils/sound_utils.dart';
 
 class ListenScreen extends StatefulWidget {
