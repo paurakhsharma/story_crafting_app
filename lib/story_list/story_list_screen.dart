@@ -4,7 +4,7 @@ import 'package:story_crafting_app/story_list/story_list_service.dart';
 import 'package:story_crafting_app/story_list/story_list_widget.dart';
 
 class StoryListScreen extends StatelessWidget {
-  final FakeStoryListService storyListService;
+  final StoryListService storyListService;
 
   const StoryListScreen({Key key, this.storyListService}) : super(key: key);
 

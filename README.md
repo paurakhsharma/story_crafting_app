@@ -2,6 +2,13 @@
 
 An app to assist in the development of oral Bible story recordings.
 
+## Getting Started
+The app can be run in local mode simply by running `flutter run`. This uses fake data and does not require integration with firebase.
+
+To execute the app with firebase integration, setup the required files and then run `flutter run lib/main_prod.dart`.
+
+Tests can be run by executing `flutter test`.
+
 ## Design
 Home page: 
 

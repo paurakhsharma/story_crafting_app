@@ -1,14 +1,44 @@
 import 'package:story_crafting_app/story_list/story.dart';
 
 final stories = [
-  Story("Creation Story", "История создания", "Russian"),
-  Story("David and Goliath", "Давид и Голиаф", "Russian"),
-  Story("Matthew 5", "Матфея 5", "Russian"),
-  Story("Matthew 6", "Матфея 6", "Russian"),
-  Story("Moses and Pharaoh", "Моисей и фараон", "Russian"),
-  Story("Isaiah", "Исайя", "Russian"),
-  Story("The Ten Commandments", "десять заповедей", "Russian"),
-  Story("Elijah and the Prophets of Baal", "Илия и пророки Ваала", "Russian"),
-  Story("The Resurrection of Jesus", "Воскресение Иисуса", "Russian"),
-  Story("Revelation", "открытие", "Russian"),
+  Story(
+      nameInEnglish: "Creation Story",
+      nameInLanguage: "История создания",
+      languageName: "Russian"),
+  Story(
+      nameInEnglish: "David and Goliath",
+      nameInLanguage: "Давид и Голиаф",
+      languageName: "Russian"),
+  Story(
+      nameInEnglish: "Matthew 5",
+      nameInLanguage: "Матфея 5",
+      languageName: "Russian"),
+  Story(
+      nameInEnglish: "Matthew 6",
+      nameInLanguage: "Матфея 6",
+      languageName: "Russian"),
+  Story(
+      nameInEnglish: "Moses and Pharaoh",
+      nameInLanguage: "Моисей и фараон",
+      languageName: "Russian"),
+  Story(
+      nameInEnglish: "Isaiah",
+      nameInLanguage: "Исайя",
+      languageName: "Russian"),
+  Story(
+      nameInEnglish: "The Ten Commandments",
+      nameInLanguage: "десять заповедей",
+      languageName: "Russian"),
+  Story(
+      nameInEnglish: "Elijah and the Prophets of Baal",
+      nameInLanguage: "Илия и пророки Ваала",
+      languageName: "Russian"),
+  Story(
+      nameInEnglish: "The Resurrection of Jesus",
+      nameInLanguage: "Воскресение Иисуса",
+      languageName: "Russian"),
+  Story(
+      nameInEnglish: "Revelation",
+      nameInLanguage: "открытие",
+      languageName: "Russian"),
 ];
