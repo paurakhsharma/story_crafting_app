@@ -86,7 +86,7 @@ class StoryStepsScreen extends StatelessWidget {
               onTap: (BuildContext context) {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SubmitScreen()),
+                  MaterialPageRoute(builder: (context) => SubmitScreen(story: this.story)),
                 );
               },
             ),
